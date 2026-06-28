@@ -1,99 +1,125 @@
-
-#  Advanced Data Structures & Algorithms
+# Advanced Data Structures & Algorithms
 
 ## **1. Arrays & Strings**
 
 ### **1.1 The In-Place Shuffle**
-- Implements random permutation generation using both Naive Shuffle and Fisher-Yates Shuffle algorithms.
-- Analyzes why Fisher-Yates guarantees uniform randomness while maintaining O(n) time and O(1) space.
-- Demonstrates the statistical bias introduced by naive random swapping through execution path analysis.
+Implements the Fisher–Yates Shuffle to generate a uniformly random permutation of an array in **O(n)** time and **O(1)** extra space.
+
+**References**
+- LeetCode: https://leetcode.com/problems/shuffle-an-array/
+- GeeksforGeeks: https://www.geeksforgeeks.org/shuffle-a-given-array-using-fisher-yates-shuffle-algorithm/
 
 ### **1.2 Memory Contiguity Conundrum**
-- Explores why contiguous 1D arrays outperform fragmented 2D structures during sequential traversal.
-- Examines CPU cache lines, spatial locality, and hardware prefetching mechanisms.
-- Highlights the performance penalties caused by pointer chasing and cache misses.
+Explains how contiguous memory improves cache performance, spatial locality, and sequential traversal efficiency.
+
+**References**
+- GeeksforGeeks: https://www.geeksforgeeks.org/row-major-order-and-column-major-order/
+- Intel: https://www.intel.com/content/www/us/en/docs/advisor/cookbook/2023-1/optimize-memory-access-patterns.html
 
 ---
 
 ## **2. Linked Lists**
 
 ### **2.1 Arbitrary Pointer**
-- Constructs a deep copy of a linked list containing both next and random pointers.
-- Achieves O(n) time complexity while using O(1) auxiliary space.
-- Demonstrates node interleaving techniques to preserve arbitrary pointer relationships.
+Constructs a deep copy of a linked list containing **next** and **random** pointers.
+
+**References**
+- LeetCode: https://leetcode.com/problems/copy-list-with-random-pointer/
+- GeeksforGeeks: https://www.geeksforgeeks.org/clone-linked-list-next-random-pointer-o1-space/
 
 ### **2.2 XOR Linked List**
-- Implements memory-efficient bidirectional traversal using XOR pointer arithmetic.
-- Stores previous and next node information within a single pointer field.
-- Discusses practical limitations involving debugging and garbage collection systems.
+Explains XOR pointer arithmetic for memory-efficient bidirectional traversal.
+
+**References**
+- GeeksforGeeks: https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-1/
+- GeeksforGeeks: https://www.geeksforgeeks.org/xor-linked-list-a-memory-efficient-doubly-linked-list-set-2/
 
 ---
 
 ## **3. Stacks & Queues**
 
-### **3.1 Amortized Queue**
-- Builds a FIFO queue using two underlying LIFO stack structures.
-- Explains why dequeue operations achieve O(1) amortized complexity.
-- Demonstrates the concept of cost distribution across multiple operations.
+### **3.1 The Amortized Queue**
+Implements a FIFO queue using two stacks with **O(1)** amortized dequeue complexity.
+
+**References**
+- LeetCode: https://leetcode.com/problems/implement-queue-using-stacks/
+- GeeksforGeeks: https://www.geeksforgeeks.org/queue-using-stacks/
 
 ### **3.2 Browser History Engine**
-- Simulates browser navigation using back, forward, and visit operations.
-- Compares dual-stack architecture against doubly linked list implementations.
-- Evaluates memory usage, navigation efficiency, and mutation handling.
+Implements browser navigation using **visit**, **back**, and **forward** operations.
+
+**References**
+- LeetCode: https://leetcode.com/problems/design-browser-history/
+- GeeksforGeeks: https://www.geeksforgeeks.org/design-custom-browser-history-based-on-given-operations/
 
 ---
 
 ## **4. Hash Tables**
 
 ### **4.1 Colliding Reality**
-- Investigates collision resolution using Separate Chaining and Linear Probing.
-- Analyzes lookup performance under high load factor conditions.
-- Examines cache behavior and clustering effects in modern systems.
+Studies collision resolution using Separate Chaining and Linear Probing.
+
+**References**
+- GeeksforGeeks: https://www.geeksforgeeks.org/collision-resolution-techniques/
+- GeeksforGeeks: https://www.geeksforgeeks.org/implementing-hash-table-open-addressing-linear-probing-cpp/
 
 ### **4.2 Cryptographic vs Non-Cryptographic Hashing**
-- Compares secure hashing algorithms against high-performance lookup hashes.
-- Evaluates throughput, collision probability, and computational overhead.
-- Demonstrates why cryptographic hashes are unsuitable for general hash tables.
+Compares secure and non-secure hashing algorithms.
+
+**References**
+- GeeksforGeeks: https://www.geeksforgeeks.org/cryptographic-hash-functions/
+- LeetCode: https://leetcode.com/tag/hash-table/
 
 ---
 
 ## **5. Trees**
 
 ### **5.1 Self-Balancing Pivot**
-- Studies AVL tree balancing through single and double rotations.
-- Explains Left-Right and Right-Left imbalance correction mechanisms.
-- Maintains logarithmic search performance through height regulation.
+Explains AVL tree balancing using rotations.
+
+**References**
+- GeeksforGeeks: https://www.geeksforgeeks.org/introduction-to-avl-tree/
+- LeetCode: https://leetcode.com/tag/avl-tree/
 
 ### **5.2 Median Streamer**
-- Continuously computes the median of an incoming data stream.
-- Utilizes a Max Heap and Min Heap to maintain balanced partitions.
-- Supports O(log n) insertion and O(1) median retrieval.
+Maintains the median of a data stream using two heaps.
+
+**References**
+- LeetCode: https://leetcode.com/problems/find-median-from-data-stream/
+- GeeksforGeeks: https://www.geeksforgeeks.org/median-of-stream-of-integers-running-integers/
 
 ---
 
 ## **6. Advanced Trees**
 
 ### **6.1 Autocomplete Scale**
-- Explores scalable prefix-search data structures for autocomplete systems.
-- Compares Trie, Compressed Trie, Radix Tree, and Ternary Search Tree architectures.
-- Focuses on reducing memory consumption without sacrificing search efficiency.
+Explores Trie-based data structures for autocomplete.
+
+**References**
+- LeetCode: https://leetcode.com/tag/trie/
+- GeeksforGeeks: https://www.geeksforgeeks.org/trie-insert-and-search/
 
 ### **6.2 Range Update Dilemma**
-- Implements efficient range updates using Segment Trees with Lazy Propagation.
-- Avoids repeated traversal of unaffected regions during updates.
-- Supports both updates and queries in O(log n) time complexity.
+Implements Segment Trees with Lazy Propagation.
+
+**References**
+- LeetCode: https://leetcode.com/tag/segment-tree/
+- GeeksforGeeks: https://www.geeksforgeeks.org/lazy-propagation-in-segment-tree/
 
 ---
 
 ## **7. Graphs**
 
 ### **7.1 Negative Cycle Trap**
-- Demonstrates failure cases of Dijkstra's Algorithm with negative edge weights.
-- Uses Bellman-Ford Algorithm for accurate shortest path computation.
-- Detects and verifies negative cycles through repeated edge relaxation.
+Explains Bellman-Ford Algorithm and negative cycle detection.
+
+**References**
+- LeetCode: https://leetcode.com/tag/shortest-path/
+- GeeksforGeeks: https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/
 
 ### **7.2 Topological Web**
-- Identifies Strongly Connected Components using Tarjan's or Kosaraju's Algorithm.
-- Detects cyclic dependencies in distributed build systems.
-- Generates valid execution orderings through Topological Sorting of DAGs.
-```
+Uses Topological Sorting and Strongly Connected Components.
+
+**References**
+- LeetCode: https://leetcode.com/tag/topological-sort/
+- GeeksforGeeks: https://www.geeksforgeeks.org/topological-sorting/
