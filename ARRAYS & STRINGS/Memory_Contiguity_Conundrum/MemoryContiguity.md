@@ -4,6 +4,10 @@
 
 A flattened **1D array** stores all elements in one continuous block of memory. When elements are accessed one after another, the CPU can read them much faster because they are stored next to each other. In contrast, `vector<vector<int>>` and `int**` store rows separately, which makes memory access slower.
 
+<img width="1099" height="1600" alt="image" src="https://github.com/user-attachments/assets/a25d03a4-49aa-4774-8be1-f4032ddcfe78" />
+<img width="1291" height="1600" alt="image" src="https://github.com/user-attachments/assets/560bb089-99c4-4a15-8954-8b556397311a" />
+
+
 ## Contiguous Memory
 
 In a 1D array, all elements are placed continuously in memory. This allows the processor to access consecutive elements without jumping to different memory locations. As a result, sequential traversal becomes faster and more efficient.
